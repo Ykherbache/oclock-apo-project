@@ -1,0 +1,282 @@
+[
+  {
+    "mechanic_id": "05zCZoLvQJ",
+    "name": "Area Control"
+  },
+  {
+    "mechanic_id": "0ez69aUfuJ",
+    "name": "Communication Limits"
+  },
+  {
+    "mechanic_id": "1382oBW7iB",
+    "name": "Bag Building"
+  },
+  {
+    "mechanic_id": ":",
+    "name": "We couldn't find what you're looking for."
+  },
+  {
+    "mechanic_id": "3te2oybNR4",
+    "name": "Area Enclosure"
+  },
+  {
+    "mechanic_id": "3tuJiW3pps",
+    "name": "Betting"
+  },
+  {
+    "mechanic_id": "5kvyChnWuO",
+    "name": "Dexterity"
+  },
+  {
+    "mechanic_id": "71HG4TJaoD",
+    "name": "Bingo"
+  },
+  {
+    "mechanic_id": "8PN2HE86wg",
+    "name": "Tile Placement"
+  },
+  {
+    "mechanic_id": "9mNukNBxfZ",
+    "name": "Cooperative Play"
+  },
+  {
+    "mechanic_id": "9NBcz45nN7",
+    "name": "Area Majority/ Influence"
+  },
+  {
+    "mechanic_id": "9YdRn9J9oZ",
+    "name": "Pattern Building"
+  },
+  {
+    "mechanic_id": "9ZlbQA8L5l",
+    "name": "End Game Bonuses"
+  },
+  {
+    "mechanic_id": "amcImLdOmD",
+    "name": "We couldn't find what you're looking for."
+  },
+  {
+    "mechanic_id": "AZxlPpi5oq",
+    "name": "Auction"
+  },
+  {
+    "mechanic_id": "BbTMRkwL0b",
+    "name": "Pick-up and Deliver"
+  },
+  {
+    "mechanic_id": "Bc7R8pLoGk",
+    "name": "Action Selection"
+  },
+  {
+    "mechanic_id": "BeD8NYAaSU",
+    "name": "Hexagon Grid"
+  },
+  {
+    "mechanic_id": "bgGxE0pI2B",
+    "name": "Area Movement"
+  },
+  {
+    "mechanic_id": "BGrhzIN69D",
+    "name": "Player Elimination"
+  },
+  {
+    "mechanic_id": "ckCp1oTVMy",
+    "name": "Action Queue"
+  },
+  {
+    "mechanic_id": "DEvPj5twid",
+    "name": "Simultaneous Play"
+  },
+  {
+    "mechanic_id": "ea1eaPBQn8",
+    "name": "Pool Building"
+  },
+  {
+    "mechanic_id": "ebJKldFVeS",
+    "name": "We couldn't find what you're looking for."
+  },
+  {
+    "mechanic_id": "EVeAdboGUA",
+    "name": "Role Playing"
+  },
+  {
+    "mechanic_id": "fBOTEBUAmV",
+    "name": "Worker Placement"
+  },
+  {
+    "mechanic_id": "fUnFqLGvxW",
+    "name": "Open Drafting"
+  },
+  {
+    "mechanic_id": "Gan96fffLL",
+    "name": "Chit-Pull System"
+  },
+  {
+    "mechanic_id": "GNtouC8NLm",
+    "name": "Partnerships"
+  },
+  {
+    "mechanic_id": "GsNGxZFNCK",
+    "name": "Deduction"
+  },
+  {
+    "mechanic_id": "hmipYN1R1I",
+    "name": "Press Your Luck"
+  },
+  {
+    "mechanic_id": "i8pEFk75OI",
+    "name": "Commodity Speculation"
+  },
+  {
+    "mechanic_id": "iWODHwRGuU",
+    "name": "Card Drafting"
+  },
+  {
+    "mechanic_id": "j2A0uFmdgc",
+    "name": "Action Timer"
+  },
+  {
+    "mechanic_id": "jbLrZb1xIb",
+    "name": "Stock Holding"
+  },
+  {
+    "mechanic_id": "jOAB6RhwBp",
+    "name": "Contracts"
+  },
+  {
+    "mechanic_id": "JYYdBW6UCE",
+    "name": "Voting"
+  },
+  {
+    "mechanic_id": "KfTS5BwIsu",
+    "name": "Drawing"
+  },
+  {
+    "mechanic_id": "Khp7U5pHZi",
+    "name": "Competitive Play"
+  },
+  {
+    "mechanic_id": "lA3KUtVFCy",
+    "name": "Set Collection"
+  },
+  {
+    "mechanic_id": "MaXzmoZUoX",
+    "name": "Line Drawing"
+  },
+  {
+    "mechanic_id": "n1GtBt35Rd",
+    "name": "Acting"
+  },
+  {
+    "mechanic_id": "ngCSHHk0H2",
+    "name": "Card Placement"
+  },
+  {
+    "mechanic_id": "oeg6wN9Eoc",
+    "name": "Action Point Allowance System"
+  },
+  {
+    "mechanic_id": "ohABM4GjbC",
+    "name": "Network and Route Building"
+  },
+  {
+    "mechanic_id": "pEHn0BKFZ8",
+    "name": "Connections"
+  },
+  {
+    "mechanic_id": "PGjmKGi26h",
+    "name": "Action / Movement Programming"
+  },
+  {
+    "mechanic_id": "PzEJDypMgC",
+    "name": "Chaining"
+  },
+  {
+    "mechanic_id": "qu5BcGjAzk",
+    "name": "Grid Movement"
+  },
+  {
+    "mechanic_id": "R0bGq4cAl4",
+    "name": "Dice Rolling"
+  },
+  {
+    "mechanic_id": "r6yIFvyXDD",
+    "name": "Memory"
+  },
+  {
+    "mechanic_id": "Rt6V388y6M",
+    "name": "Resource Gathering"
+  },
+  {
+    "mechanic_id": "S0O9ucexPS",
+    "name": "Flicking"
+  },
+  {
+    "mechanic_id": "U3zhCQH7Et",
+    "name": "Modular Board"
+  },
+  {
+    "mechanic_id": "U7vKyeRc0N",
+    "name": "Hidden Roles"
+  },
+  {
+    "mechanic_id": "UAV3t3FxVI",
+    "name": "Action Drafting"
+  },
+  {
+    "mechanic_id": "uZJS07nXF5",
+    "name": "Pattern Recognition"
+  },
+  {
+    "mechanic_id": "uZR0NCIA6D",
+    "name": "Solo / Solitaire Game"
+  },
+  {
+    "mechanic_id": "Voqy2dgrIM",
+    "name": "Hidden Traitor"
+  },
+  {
+    "mechanic_id": "VQQsdFilIf",
+    "name": "Deck Constructing"
+  },
+  {
+    "mechanic_id": "vZsDDAdOoe",
+    "name": "Deck Building"
+  },
+  {
+    "mechanic_id": "WPytek5P8l",
+    "name": "Hand Management"
+  },
+  {
+    "mechanic_id": "wV5peB05xs",
+    "name": "Drafting"
+  },
+  {
+    "mechanic_id": "XM2FYZmBHH",
+    "name": "Variable Player Powers"
+  },
+  {
+    "mechanic_id": "xuphiSlrxI",
+    "name": "Campaign"
+  },
+  {
+    "mechanic_id": "YlqCkWPY0r",
+    "name": "Enclosure"
+  },
+  {
+    "mechanic_id": "yQ4ZptdyD1",
+    "name": "Ownership"
+  },
+  {
+    "mechanic_id": "yu3eas6v7A",
+    "name": "Engine Building"
+  },
+  {
+    "mechanic_id": "zw4KMn5rcD",
+    "name": "Dice Movement"
+  },
+  {
+    "mechanic_id": "ZX3hYcF9H7",
+    "name": "Bluffing"
+  }
+]

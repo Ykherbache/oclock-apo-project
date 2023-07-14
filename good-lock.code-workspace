@@ -1,0 +1,78 @@
+{
+  "folders": [
+    {
+      "name": "BackEnd",
+      "path": "back"
+    },
+    {
+      "name": "FrontEnd",
+      "path": "front"
+    },
+    {
+      "name": "Scripts",
+      "path": "scripts"
+    },
+    {
+      "name": "config",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "search.exclude": {
+      "**/build*": true,
+      "**/node_modules*": true,
+      "**/.next": true,
+      "**/.vscode": true,
+      "**/dist": true
+    },
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/.next": true,
+      "**/dist": true,
+      "back": true,
+      "front": true
+    },
+    "references.preferredLocation": "view",
+    "git.mergeEditor": true,
+
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "eslint.packageManager": "yarn",
+    "eslint.format.enable": true,
+    "[json]": {
+      "editor.formatOnSave": true
+    },
+    "[jsonc]": {
+      "editor.formatOnSave": true
+    },
+    "[css]": {
+      "editor.formatOnSave": true
+    },
+    "[scss]": {
+      "editor.formatOnSave": true
+    },
+    "[markdown]": {
+      "editor.formatOnSave": true
+    },
+    "css.format.spaceAroundSelectorSeparator": true,
+    "less.format.spaceAroundSelectorSeparator": true,
+    "scss.format.spaceAroundSelectorSeparator": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "jest.disabledWorkspaceFolders": ["root", "Scripts"],
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "editor.fontFamily": "'JetBrains Mono', 'monospace', monospace",
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    "editor.gotoLocation.multipleTypeDefinitions": "goto",
+    "editor.gotoLocation.multipleDeclarations": "goto",
+    "editor.gotoLocation.multipleImplementations": "goto",
+    "editor.gotoLocation.multipleReferences": "goto",
+    "explorer.compactFolders": false,
+    "vue.inlayHints.optionsWrapper": false
+  },
+  "extensions": {
+    "recommendations": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
+  }
+}

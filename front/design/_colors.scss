@@ -1,0 +1,34 @@
+$color-primary: #ee8138;
+$color-secondary: #000000;
+$color-tertiary: #e35f07;
+$color-quaternary: #963f06;
+$color-quinary: #ec7f37;
+$color-info: #26a69a;
+$color-success: #66bb6a;
+$color-warning: #ffa000;
+$color-error: #c45855;
+$color-background-light: #ffffff;
+
+.theme--light {
+  --color-primary: #ee8138;
+  --color-secondary: #000000;
+  --color-tertiary: #e35f07;
+  --color-quaternary: #963f06;
+  --color-quinary: #ec7f37;
+  --color-info: #26a69a;
+  --color-success: #66bb6a;
+  --color-warning: #ffa000;
+  --color-error: #c45855;
+}
+
+.themme-dark {
+  --color-primary: #ee8138;
+  --color-secondary: #000000;
+  --color-tertiary: #e35f07;
+  --color-quaternary: #963f06;
+  --color-quinary: #ec7f37;
+  --color-info: #26a69a;
+  --color-success: #66bb6a;
+  --color-warning: #ffa000;
+  --color-error: #c45855;
+}

@@ -1,0 +1,14 @@
+.idea
+**/node_modules
+**/package-lock.json
+**/.yarn
+**/yarn.lock
+**/.env
+scripts/js/*.json
+scripts/bash/download-data-from-bga/save/
+scripts/bash/download-data-from-bga/tmp/bga-sitemap-xml/*.xml
+
+# back uploads related to user avatars
+back/app/uploads/**/*.png
+back/app/uploads/**/*.jpg
+back/app/uploads/**/*.jpeg

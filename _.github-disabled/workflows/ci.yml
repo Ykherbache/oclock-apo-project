@@ -1,0 +1,32 @@
+name: Continuous integration (pull requests)
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-FrontEnd-Tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./front
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      - run: yarn
+      - run: yarn test:unit
+
+  run-BackEnd-Tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./back
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      - run: yarn
+      - run: yarn test

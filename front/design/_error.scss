@@ -1,0 +1,45 @@
+#nuxt-error {
+  background-color: white;
+  h1 {
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+  }
+  .img-error {
+    width: 100%;
+  }
+
+  .quote {
+    font-size: 30px;
+    color: black;
+    margin-bottom: 40px;
+  }
+
+  .quote-author {
+    margin-top: 50px;
+    font-size: 20px;
+    font-style: italic;
+    color: orange;
+  }
+
+  .back {
+    color: orange;
+    background-color: black;
+    border: 1px solid orange;
+  }
+
+  .back:hover {
+    background: linear-gradient(
+      to right,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+    );
+    color: black !important;
+  }
+}

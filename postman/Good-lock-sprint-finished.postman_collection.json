@@ -1,0 +1,856 @@
+{
+	"info": {
+		"_postman_id": "f03ba4c9-8fba-42d9-9a3f-b99ccff2e22b",
+		"name": "Good-lock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}{{auth_routes}}logout",
+							"host": [
+								"{{base_url}}{{auth_routes}}logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"jwt_token\",pm.response.json().token);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"email\":\"yaci@yaci.fr\",\n\"password\":\"teSt25$dhhd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}{{auth_routes}}login",
+							"host": [
+								"{{base_url}}{{auth_routes}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"email\": \"Yacii@yaci.fr\",\n\"firstname\": \"yac1\",\n\"lastname\": \"kh\",\n\"password\": \"teSt25$dhhd\",\n\"pseudo\": \"fuckingUnicorn\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}{{/auth/register",
+							"host": [
+								"{{base_url}}{{"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Message",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"receiver_pseudo\":\"\",\r\n\"sender_id\":\"\",\r\n\"object\":\"\",\r\n\"message_content\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}{{message_routes}}/create",
+							"host": [
+								"{{base_url}}{{message_routes}}"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all user messages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}{{message_routes}}/list/:userId",
+							"host": [
+								"{{base_url}}{{message_routes}}"
+							],
+							"path": [
+								"list",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "mettre id user ici",
+									"description": "id de l'utilisateur a remplir ici"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get One Message",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}{{message_routes}}/:messageId",
+							"host": [
+								"{{base_url}}{{message_routes}}"
+							],
+							"path": [
+								":messageId"
+							],
+							"variable": [
+								{
+									"key": "messageId",
+									"value": "mettre id message ici",
+									"description": "id du message a recuperer"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete message",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}{{message_routes}}?messageId=mettre message id ici&userId=mettre user id ici",
+							"host": [
+								"{{base_url}}{{message_routes}}"
+							],
+							"query": [
+								{
+									"key": "messageId",
+									"value": "mettre message id ici",
+									"description": "id du message a suppr"
+								},
+								{
+									"key": "userId",
+									"value": "mettre user id ici",
+									"description": "id du user qui a recu le message avec l'id messageId"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{jwt_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Rents",
+			"item": [
+				{
+					"name": "create rent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"game_id\": \"\",\r\n    \"owner_id\": \"\",\r\n    \"beginning_date\": \"\",\r\n    \"renter_id\": \"\",\r\n    \"rental_game_id\": \"\",\r\n    \"status\": \"\",\r\n    \"price\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}rent/create",
+							"host": [
+								"{{base_url}}rent"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"\",\r\n    \"status\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}rent/:id/updateStatus",
+							"host": [
+								"{{base_url}}rent"
+							],
+							"path": [
+								":id",
+								"updateStatus"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "mettre  id d'une  Rent ici",
+									"description": "id de la rent a modifier "
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get rents by user id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}user/account/rent/?page",
+							"host": [
+								"{{base_url}}user"
+							],
+							"path": [
+								"account",
+								"rent",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": null,
+									"description": "mettre la page pour la pagination ici"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{jwt_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Games",
+			"item": [
+				{
+					"name": "get all games (on recupere 100 )",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}games",
+							"host": [
+								"{{base_url}}games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get games by name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"une partie du nom du jeu ici (pas besoin que ca soit exact)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}gamesByName",
+							"host": [
+								"{{base_url}}gamesByName"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get game by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}game/:id",
+							"host": [
+								"{{base_url}}game"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "id du jeu a recuperer ici"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{jwt_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "get user profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}{{user_routes}}/:id",
+							"host": [
+								"{{base_url}}{{user_routes}}"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "id du user a qui on va recuperer le profil"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user information",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"\",\r\n    \"lastname\": \"\",\r\n    \"firstname\": \"\",\r\n    \"city\": \"\",\r\n    \"email\": \"\",\r\n    \"pseudo\": \"\",\r\n    \"role\": \"\",\r\n    \"description\": \"\",\r\n    \"img\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}{{user_routes}}/account/user-information",
+							"host": [
+								"{{base_url}}{{user_routes}}"
+							],
+							"path": [
+								"account",
+								"user-information"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{jwt_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Upload",
+			"item": [
+				{
+					"name": "upload image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "{{base_url}}{{upload_routes}}?",
+							"host": [
+								"{{base_url}}{{upload_routes}}"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": null,
+									"description": "pour tester cette endpoint il faut aller dans body et dans binary et upload une image la bas"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{jwt_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Renting_games",
+			"item": [
+				{
+					"name": "add renting Game",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"\",\r\n    \"ownerId\": \"\",\r\n    \"priceDayRenting\": \"\",\r\n    \"discountMoreDayRenting\": \"\",\r\n    \"discountWeekRenting\": \"\",\r\n    \"priceBuying\": \"\",\r\n    \"cautionPrice\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}rentingGames/add",
+							"host": [
+								"{{base_url}}rentingGames"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get renting games by user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"page\": \"\",\r\n \"pageSize\": \"\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}rentingGames/:id",
+							"host": [
+								"{{base_url}}rentingGames"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "mettre lid du user ici a qui on veux recuperer ses jeux en location"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get renting game by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}rentingGames/game/:id",
+							"host": [
+								"{{base_url}}rentingGames"
+							],
+							"path": [
+								"game",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "id de la location pour qui on veux recuperer un game"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get best Renting Game by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"game_id\":\"\" //id d'un jeu dans Games, on se sert pour recuperer toute les locations de ce jeu\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}bestRentingGames/:id",
+							"host": [
+								"{{base_url}}bestRentingGames"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "cest un erreur coté back cette id ne sert a rien donc vous pouvez ne pas le remplir, par contre faut remplir le game_id coté back"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get list of renting games",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}rentingGames?city&category",
+							"host": [
+								"{{base_url}}rentingGames"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": null,
+									"description": "nom de la city on va utiliser ca pour filtrer sur le owner_id (user.city) de la location"
+								},
+								{
+									"key": "category",
+									"value": null,
+									"description": "nom de la category on va utiliser ca pour recup  les location de cette category"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "jwt_token",
+			"value": ""
+		},
+		{
+			"key": "____ Routes Related ____",
+			"value": "________________________________",
+			"type": "default"
+		},
+		{
+			"key": "message_routes",
+			"value": "user/account/message",
+			"type": "default"
+		},
+		{
+			"key": "auth_routes",
+			"value": "auth/",
+			"type": "default"
+		},
+		{
+			"key": "user_routes",
+			"value": "user",
+			"type": "default"
+		},
+		{
+			"key": "upload_routes",
+			"value": "upload/",
+			"type": "default"
+		}
+	]
+}

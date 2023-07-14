@@ -1,0 +1,42 @@
+version: "3.9"
+services:
+  node:
+    container_name: back
+    build:
+      context: ./back
+      dockerfile: Dockerfile
+    tty: true
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./back:/app
+      - /app/node_modules/
+  db:
+    container_name: mysql_atelier
+    build:
+      context: ./
+      dockerfile: mysql/Dockerfile
+    environment:
+      - MYSQL_ALLOW_LOCAL_INFILE=1
+      - MYSQL_DATABASE=bdd_atelier
+      - MYSQL_ROOT_PASSWORD=toor
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql_data_atelier:/var/lib/mysql
+  phpmyadmin:
+    container_name: pma_atelier
+    build:
+      context: ./
+      dockerfile: pma/Dockerfile
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mariadb
+      - UPLOAD_LIMIT=500M
+      - POST_MAX_SIZE=500M
+    depends_on:
+      - db
+    ports:
+      - 8082:80
+volumes:
+  mysql_data_atelier:
