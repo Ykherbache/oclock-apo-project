@@ -1,3 +1,1 @@
-module.exports = {
-  testEnvironment: "node",
-};
+config/jest/jest.config.cjs

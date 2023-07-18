@@ -1,9 +1,1 @@
-{
-  "compilerOptions": {
-    "module": "node16",
-    "target": "es6",
-    "checkJs": true,
-    "allowJs": true
-  },
-  "exclude": ["node_modules"]
-}
+config/nextjs/jsconfig.json
