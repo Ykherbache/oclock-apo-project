@@ -1,0 +1,11 @@
+Dockerfile 
+jest.config.cjs 
+jsconfig.json  
+yarn-error.log 
+yarn.lock
+.dockerignore
+.eslintrc.json
+.prettierignore
+.prettierrc
+.sequelizerc
+
